@@ -1,9 +1,10 @@
+import '../css/main.scss';
+import { basicCanvas } from './test/basic';
+import { canvasGrid } from './test/grid';
 const canvas = document.querySelector('#asteroids');
 const context = canvas.getContext('2d');
 
-context.strokeStyle = 'gray';
-context.lineWidth = 5;
-context.rect(75, 75, 250, 250);
-context.stroke();
 
-console.log('whatever this context object is', context);
+// basicCanvas(canvas, context);
+
+canvasGrid(canvas, context);
