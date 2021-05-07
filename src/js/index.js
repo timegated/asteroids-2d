@@ -38,3 +38,16 @@ function update(elapsed) {
   y += elapsed * ySpeed;
   angle = (angle + elapsed * rotation_speed) % (2 * Math.PI);
 };
+
+function recursiveThing(n) {
+  if (n <= 0) {
+    return
+  }
+  return {
+    call: recursiveThing(n - 1),
+    log: console.log(`This number ${n}`)
+  }
+
+}
+
+recursiveThing(100)
