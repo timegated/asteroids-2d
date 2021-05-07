@@ -1,6 +1,6 @@
 import { drawGrid } from "../grid";
 import { drawAsteroid } from '../asteroid/asteroid';
-export function drawScene(el, ctx, guide, asteroid, x, y) {
+export function drawScene(el, ctx, guide, x, y) {
   const radius = 50;
   const noise = 0.2;
   let angle = 0;
@@ -16,9 +16,8 @@ export function drawScene(el, ctx, guide, asteroid, x, y) {
   ctx.save();
   ctx.translate(x, y);
   ctx.rotate(angle);
-  console.log(asteroid)
-  console.log(guide)
-  drawAsteroid(ctx, radius, shape, point, { guide: guide, noise: noise });
+  
+  drawAsteroid(ctx, radius, shape, point, { guide: false, noise: noise });
 
   ctx.restore();
 };

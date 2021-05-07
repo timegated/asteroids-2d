@@ -19,7 +19,7 @@ const rotSpeed = 2 * Math.PI * (Math.random() - 0.5);
 
 
 
-drawScene(canvas, context, true, drawAsteroid, x, y);
+drawScene(canvas, context, true, x, y);
 
 function update(elapsed) {
   if (x - radius + elapsed * xSpeed > context.canvas.width) {
