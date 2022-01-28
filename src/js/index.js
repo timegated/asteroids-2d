@@ -1,4 +1,4 @@
-import { drawAsteroid } from '../js/lib/asteroid/asteroid';
+import Asteroid from './lib/asteroid/AsteroidClass';
 import { drawScene } from '../js/lib/scene/drawScene';
 import '../css/main.scss';
 
@@ -8,8 +8,9 @@ const context = canvas.getContext('2d');
 // asteroid state
 let x = context.canvas.width * Math.random();
 let y = context.canvas.height * Math.random();
+let asteroid = new Asteroid(10000, Math.random() * context.canvas.width, Math.random() * context.canvas.height);
 
-
+console.dir(asteroid);
 // asteroid movement
 const xSpeed = context.canvas.width * (Math.random() - 0.5);
 const ySpeed = context.canvas.height * (Math.random() - 0.5);

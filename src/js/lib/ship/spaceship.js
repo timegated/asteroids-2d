@@ -1,5 +1,5 @@
-import { drawGrid } from '../js/lib/grid';
-import { drawShip } from '../js/lib/drawing';
+import { drawGrid } from '../grid';
+import { drawShip } from '../drawing';
 
 export const basicShip = (el, obj) => {
   drawGrid(obj);
